@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import TableData from "./Conponents/TableData";
+import Navbar from "./Conponents/Navbar";
+import Heading from "./Conponents/Heading";
+import { useState } from "react";
 
 function App() {
+  const [searchInput, setSearchInput] = useState("");
+  function handleOnChange(e) {
+    setSearchInput(e.target.value);
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar handleOnChange={handleOnChange} />
+      <Heading />
+      <TableData searchInput={searchInput} />
     </div>
   );
 }

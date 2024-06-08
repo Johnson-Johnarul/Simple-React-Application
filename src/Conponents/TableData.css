@@ -1,0 +1,10 @@
+.table-container{
+  width: "100%";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+.grid{
+  color: rgb(232, 230, 230);
+}
